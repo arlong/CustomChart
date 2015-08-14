@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--纵坐标文字大小-->
+    <dimen name="bar_chart_text_size_y">13sp</dimen>
+    <!--表格横坐标文字大小-->
+    <dimen name="bar_chart_text_size_x">10sp</dimen>
+    <!--横坐标文字左右padding-->
+    <dimen name="bar_chart_text_padding_x">2dp</dimen>
+    <!--纵坐标文字左右padding-->
+    <dimen name="bar_chart_text_padding_y">5dp</dimen>
+    <!--每一个bar的宽度-->
+    <dimen name="bar_chart_bar_width">60dp</dimen>
+</resources>
