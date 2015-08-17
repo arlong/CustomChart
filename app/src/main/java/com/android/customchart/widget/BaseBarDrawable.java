@@ -13,7 +13,7 @@ import android.graphics.drawable.Drawable;
  *
  * 柱状图形背景
  */
-public class StaticBarDrawable extends Drawable {
+public class BaseBarDrawable extends Drawable {
     /**
      * 当前绘制用的颜色
      */
@@ -49,7 +49,7 @@ public class StaticBarDrawable extends Drawable {
 
     private boolean leftCorner;
     private boolean rightCorner;
-    public StaticBarDrawable(int color,int num,boolean leftCorner,boolean rightCorner) {
+    public BaseBarDrawable(int color, int num, boolean leftCorner, boolean rightCorner) {
         super();
         this.color = color;
         this.fractor = num*10;

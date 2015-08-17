@@ -9,7 +9,7 @@ import com.nineoldandroids.animation.ValueAnimator;
 /**
  * 带有文字的柱状图形
  */
-public class BarDrawable extends StaticBarDrawable implements ValueAnimator.AnimatorUpdateListener {
+public class BarDrawable extends BaseBarDrawable implements ValueAnimator.AnimatorUpdateListener {
     private String text;
 
     public BarDrawable(int color,int num,boolean leftCorner,boolean rightCorner) {

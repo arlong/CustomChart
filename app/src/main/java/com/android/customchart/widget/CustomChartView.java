@@ -50,7 +50,7 @@ public class CustomChartView extends FrameLayout implements Runnable{
     //每一个bar的颜色，从这里面顺序循环取
     private static int[] BAR_COLORS = new int[]{0xFFFFA82C,0xFF8FC320,0xFF38C7F1,0xFF2B8EFB,0xFF8D91F2};
     private static BarDrawable[] barDrawables;
-    private static StaticBarDrawable[] bgDrawables;
+    private static BaseBarDrawable[] bgDrawables;
     public CustomChartView(Context context) {
         super(context);
         init(context);
@@ -76,7 +76,7 @@ public class CustomChartView extends FrameLayout implements Runnable{
         setWillNotDraw(false);
     }
     public void init(int[] values,String[] axisText){
-        bgDrawables = new StaticBarDrawable[values.length];
+        bgDrawables = new BaseBarDrawable[values.length];
         barDrawables = new BarDrawable[values.length];
         LinearLayout bgLayout = (LinearLayout) findViewById(R.id.chart_bg);
         LinearLayout barLayout = (LinearLayout) findViewById(R.id.chart_bar);
@@ -88,7 +88,7 @@ public class CustomChartView extends FrameLayout implements Runnable{
             //添加背景bar
             View bg = new View(context);
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(barWidth, LinearLayout.LayoutParams.MATCH_PARENT);
-            bgDrawables[i] = new StaticBarDrawable(BAR_BG_COLOR,100,i==0,i == values.length-1);
+            bgDrawables[i] = new BaseBarDrawable(BAR_BG_COLOR,100,i==0,i == values.length-1);
             bg.setBackgroundDrawable(bgDrawables[i]);
             bgLayout.addView(bg,params);
             //添加前景bar
@@ -129,7 +129,7 @@ public class CustomChartView extends FrameLayout implements Runnable{
         //一条竖线
         canvas.drawLine(leftMargin, 0, leftMargin, bound.height(), paint);
         paint.setColor(TEXT_COLOR);
-        canvas.drawText("很好",(leftMargin-textWidth)/2,bound.height()*.2f-paint.descent(),paint);
+        canvas.drawText("优秀",(leftMargin-textWidth)/2,bound.height()*.2f-paint.descent(),paint);
         canvas.drawText("一般",(leftMargin-textWidth)/2,bound.height()*.5f-paint.descent(),paint);
         canvas.drawText("较差", (leftMargin - textWidth) / 2, bound.height() * .8f - paint.descent(), paint);
         super.onDraw(canvas);
