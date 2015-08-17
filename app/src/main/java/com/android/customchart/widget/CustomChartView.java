@@ -129,7 +129,7 @@ public class CustomChartView extends FrameLayout implements Runnable{
         //一条竖线
         canvas.drawLine(leftMargin, 0, leftMargin, bound.height(), paint);
         paint.setColor(TEXT_COLOR);
-        canvas.drawText("优秀",(leftMargin-textWidth)/2,bound.height()*.2f-paint.descent(),paint);
+        canvas.drawText("很好",(leftMargin-textWidth)/2,bound.height()*.2f-paint.descent(),paint);
         canvas.drawText("一般",(leftMargin-textWidth)/2,bound.height()*.5f-paint.descent(),paint);
         canvas.drawText("较差", (leftMargin - textWidth) / 2, bound.height() * .8f - paint.descent(), paint);
         super.onDraw(canvas);
